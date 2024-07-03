@@ -14,18 +14,21 @@ struct ViewsRoadmapSelection: View {
     @State private var selectedComposeViewRoadmap: ViewComposeRoadmap = .unknown
     
     var body: some View {
-        VStack {
-            switch selectedRoadmap {
-            case .compose:
-                backToMainMenuButton
-                viewComposeSelectionView
-            case .modifier:
-                backToMainMenuButton
-                Text("Coming soon")
-            case .unknown:
-                mainViewSelectionView
-            }
+        NavigationView {
+            mainViewSelectionView
         }
+        //        VStack {
+        //            switch selectedRoadmap {
+        //            case .compose:
+        //                backToMainMenuButton
+        //                viewComposeSelectionView
+        //            case .modifier:
+        //                backToMainMenuButton
+        //                Text("Coming soon")
+        //            case .unknown:
+        //                mainViewSelectionView
+        //            }
+        //        }
     }
     
     private var backToMainMenuButton: some View {
@@ -47,14 +50,14 @@ struct ViewsRoadmapSelection: View {
                 if item == .unknown {
                     AnyView(EmptyView())
                 } else {
-                    Button {
+                    NavigationLink {
                         switch item {
                         case .compose:
-                            selectedRoadmap = .compose
+                            viewComposeSelectionView
                         case .modifier:
-                            selectedRoadmap = .modifier
+                            Text("Coming soon")
                         case .unknown:
-                            selectedRoadmap = .unknown
+                            AnyView(EmptyView())
                         }
                     } label: {
                         Text(item.description)
@@ -71,29 +74,29 @@ struct ViewsRoadmapSelection: View {
     
     private var viewComposeSelectionView: some View {
         return VStack {
-            switch selectedComposeViewRoadmap {
-            case .navigation:
-                NavigationViewScreen()
-            case .containerViews:
-                Text("Coming soon")
-            case .layoutSystem:
-                Text("Coming soon")
-            case .unknown:
-                ForEach(composeRoadmap, id: \.hashValue) { item in
-                    if item == .unknown {
-                        AnyView(EmptyView())
-                    } else {
-                        Button {
-                            selectedComposeViewRoadmap = item
-                        } label: {
-                            Text(item.description)
-                                .padding(8)
-                                .foregroundStyle(.white)
-                                .background(.orange)
-                                .fontWeight(.bold)
+            ForEach(composeRoadmap, id: \.hashValue) { item in
+                if item == .unknown {
+                    AnyView(EmptyView())
+                } else {
+                    NavigationLink {
+                        switch item {
+                        case .navigation:
+                            NavigationViewScreen()
+                        case .containerViews:
+                            Text("Coming soon")
+                        case .layoutSystem:
+                            Text("Coming soon")
+                        case .unknown:
+                            AnyView(EmptyView())
                         }
-                        .clipShape(RoundedRectangle(cornerRadius: 10))
+                    } label: {
+                        Text(item.description)
+                            .padding(8)
+                            .foregroundStyle(.white)
+                            .background(.orange)
+                            .fontWeight(.bold)
                     }
+                    .clipShape(RoundedRectangle(cornerRadius: 10))
                 }
             }
         }
