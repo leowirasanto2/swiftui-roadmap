@@ -9,7 +9,12 @@ import SwiftUI
 
 struct NavigationViewScreen: View {
     var body: some View {
-        Text("Hi! This is the navigation sample in SwiftUI")
+        VStack (spacing: 16) {
+            Text("Hi! This is the navigation sample in SwiftUI")
+                .font(.headline)
+            
+            FirstScreen()
+        }
     }
 }
 

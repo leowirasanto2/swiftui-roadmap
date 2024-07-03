@@ -19,6 +19,7 @@ struct SecondScreen: View {
                 }
             }
         }
+        .navigationTitle("Second screen")
     }
 }
 

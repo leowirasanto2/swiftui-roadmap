@@ -11,6 +11,7 @@ struct ViewsRoadmapSelection: View {
     private var roadMap = ViewsRoadmap.allCases
     private var composeRoadmap = ViewComposeRoadmap.allCases
     @State private var selectedRoadmap: ViewsRoadmap = .unknown
+    @State private var selectedComposeViewRoadmap: ViewComposeRoadmap = .unknown
     
     var body: some View {
         VStack {
@@ -30,6 +31,7 @@ struct ViewsRoadmapSelection: View {
     private var backToMainMenuButton: some View {
         return Button {
             selectedRoadmap = .unknown
+            selectedComposeViewRoadmap = .unknown
         } label: {
             HStack(alignment: .center) {
                 Image(systemName: "arrow.left.circle")
@@ -69,29 +71,29 @@ struct ViewsRoadmapSelection: View {
     
     private var viewComposeSelectionView: some View {
         return VStack {
-            ForEach(composeRoadmap, id: \.hashValue) { item in
-                if item == .unknown {
-                    AnyView(EmptyView())
-                } else {
-                    Button {
-                        switch item {
-                        case .navigation:
-                            break
-                        case .containerViews:
-                            break
-                        case .layoutSystem:
-                            break
-                        case .unknown:
-                            break
+            switch selectedComposeViewRoadmap {
+            case .navigation:
+                NavigationViewScreen()
+            case .containerViews:
+                Text("Coming soon")
+            case .layoutSystem:
+                Text("Coming soon")
+            case .unknown:
+                ForEach(composeRoadmap, id: \.hashValue) { item in
+                    if item == .unknown {
+                        AnyView(EmptyView())
+                    } else {
+                        Button {
+                            selectedComposeViewRoadmap = item
+                        } label: {
+                            Text(item.description)
+                                .padding(8)
+                                .foregroundStyle(.white)
+                                .background(.orange)
+                                .fontWeight(.bold)
                         }
-                    } label: {
-                        Text(item.description)
-                            .padding(8)
-                            .foregroundStyle(.white)
-                            .background(.orange)
-                            .fontWeight(.bold)
+                        .clipShape(RoundedRectangle(cornerRadius: 10))
                     }
-                    .clipShape(RoundedRectangle(cornerRadius: 10))
                 }
             }
         }
