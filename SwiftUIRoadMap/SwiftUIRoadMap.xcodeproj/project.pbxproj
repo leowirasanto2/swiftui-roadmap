@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		60B7753E2C3507B200E7DEF6 /* FirstScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60B7753D2C3507B200E7DEF6 /* FirstScreen.swift */; };
+		60B775402C3507BA00E7DEF6 /* SecondScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60B7753F2C3507BA00E7DEF6 /* SecondScreen.swift */; };
+		60B775432C3507FB00E7DEF6 /* Roadmap.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60B775422C3507FB00E7DEF6 /* Roadmap.swift */; };
 		60F314FC2C3505200088C390 /* SwiftUIRoadMapApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60F314FB2C3505200088C390 /* SwiftUIRoadMapApp.swift */; };
 		60F314FE2C3505200088C390 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60F314FD2C3505200088C390 /* ContentView.swift */; };
 		60F315002C3505210088C390 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 60F314FF2C3505210088C390 /* Assets.xcassets */; };
@@ -34,6 +37,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		60B7753D2C3507B200E7DEF6 /* FirstScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstScreen.swift; sourceTree = "<group>"; };
+		60B7753F2C3507BA00E7DEF6 /* SecondScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondScreen.swift; sourceTree = "<group>"; };
+		60B775422C3507FB00E7DEF6 /* Roadmap.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Roadmap.swift; sourceTree = "<group>"; };
 		60F314F82C3505200088C390 /* SwiftUIRoadMap.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftUIRoadMap.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		60F314FB2C3505200088C390 /* SwiftUIRoadMapApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUIRoadMapApp.swift; sourceTree = "<group>"; };
 		60F314FD2C3505200088C390 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -85,8 +91,18 @@
 		60B7753C2C35077000E7DEF6 /* Screen */ = {
 			isa = PBXGroup;
 			children = (
+				60B7753D2C3507B200E7DEF6 /* FirstScreen.swift */,
+				60B7753F2C3507BA00E7DEF6 /* SecondScreen.swift */,
 			);
 			path = Screen;
+			sourceTree = "<group>";
+		};
+		60B775412C3507EA00E7DEF6 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				60B775422C3507FB00E7DEF6 /* Roadmap.swift */,
+			);
+			path = Utils;
 			sourceTree = "<group>";
 		};
 		60F314EF2C3505200088C390 = {
@@ -112,6 +128,7 @@
 		60F314FA2C3505200088C390 /* SwiftUIRoadMap */ = {
 			isa = PBXGroup;
 			children = (
+				60B775412C3507EA00E7DEF6 /* Utils */,
 				60B7753B2C35074900E7DEF6 /* Core */,
 				60F314FF2C3505210088C390 /* Assets.xcassets */,
 				60F315012C3505210088C390 /* SwiftUIRoadMap.entitlements */,
@@ -276,7 +293,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				60F314FE2C3505200088C390 /* ContentView.swift in Sources */,
+				60B775402C3507BA00E7DEF6 /* SecondScreen.swift in Sources */,
 				60F314FC2C3505200088C390 /* SwiftUIRoadMapApp.swift in Sources */,
+				60B7753E2C3507B200E7DEF6 /* FirstScreen.swift in Sources */,
+				60B775432C3507FB00E7DEF6 /* Roadmap.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
