@@ -11,6 +11,7 @@
 		60B775402C3507BA00E7DEF6 /* SecondScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60B7753F2C3507BA00E7DEF6 /* SecondScreen.swift */; };
 		60B775432C3507FB00E7DEF6 /* Roadmap.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60B775422C3507FB00E7DEF6 /* Roadmap.swift */; };
 		60B775482C350C6300E7DEF6 /* ViewsRoadmapSelection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60B775472C350C6300E7DEF6 /* ViewsRoadmapSelection.swift */; };
+		60B7754B2C35110000E7DEF6 /* NavigationViewScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60B7754A2C35110000E7DEF6 /* NavigationViewScreen.swift */; };
 		60F314FC2C3505200088C390 /* SwiftUIRoadMapApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60F314FB2C3505200088C390 /* SwiftUIRoadMapApp.swift */; };
 		60F314FE2C3505200088C390 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60F314FD2C3505200088C390 /* ContentView.swift */; };
 		60F315002C3505210088C390 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 60F314FF2C3505210088C390 /* Assets.xcassets */; };
@@ -42,6 +43,7 @@
 		60B7753F2C3507BA00E7DEF6 /* SecondScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondScreen.swift; sourceTree = "<group>"; };
 		60B775422C3507FB00E7DEF6 /* Roadmap.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Roadmap.swift; sourceTree = "<group>"; };
 		60B775472C350C6300E7DEF6 /* ViewsRoadmapSelection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewsRoadmapSelection.swift; sourceTree = "<group>"; };
+		60B7754A2C35110000E7DEF6 /* NavigationViewScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationViewScreen.swift; sourceTree = "<group>"; };
 		60F314F82C3505200088C390 /* SwiftUIRoadMap.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftUIRoadMap.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		60F314FB2C3505200088C390 /* SwiftUIRoadMapApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUIRoadMapApp.swift; sourceTree = "<group>"; };
 		60F314FD2C3505200088C390 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -94,8 +96,6 @@
 			isa = PBXGroup;
 			children = (
 				60B775442C350AB800E7DEF6 /* ViewsRoadmap */,
-				60B7753D2C3507B200E7DEF6 /* FirstScreen.swift */,
-				60B7753F2C3507BA00E7DEF6 /* SecondScreen.swift */,
 			);
 			path = Screen;
 			sourceTree = "<group>";
@@ -111,9 +111,28 @@
 		60B775442C350AB800E7DEF6 /* ViewsRoadmap */ = {
 			isa = PBXGroup;
 			children = (
+				60B775492C3510E200E7DEF6 /* Components */,
 				60B775472C350C6300E7DEF6 /* ViewsRoadmapSelection.swift */,
 			);
 			path = ViewsRoadmap;
+			sourceTree = "<group>";
+		};
+		60B775492C3510E200E7DEF6 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				60B7754C2C35110400E7DEF6 /* Navigation */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		60B7754C2C35110400E7DEF6 /* Navigation */ = {
+			isa = PBXGroup;
+			children = (
+				60B7753D2C3507B200E7DEF6 /* FirstScreen.swift */,
+				60B7753F2C3507BA00E7DEF6 /* SecondScreen.swift */,
+				60B7754A2C35110000E7DEF6 /* NavigationViewScreen.swift */,
+			);
+			path = Navigation;
 			sourceTree = "<group>";
 		};
 		60F314EF2C3505200088C390 = {
@@ -305,6 +324,7 @@
 			files = (
 				60F314FE2C3505200088C390 /* ContentView.swift in Sources */,
 				60B775402C3507BA00E7DEF6 /* SecondScreen.swift in Sources */,
+				60B7754B2C35110000E7DEF6 /* NavigationViewScreen.swift in Sources */,
 				60F314FC2C3505200088C390 /* SwiftUIRoadMapApp.swift in Sources */,
 				60B7753E2C3507B200E7DEF6 /* FirstScreen.swift in Sources */,
 				60B775482C350C6300E7DEF6 /* ViewsRoadmapSelection.swift in Sources */,
