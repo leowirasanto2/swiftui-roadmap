@@ -72,6 +72,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		60B7753B2C35074900E7DEF6 /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				60B7753C2C35077000E7DEF6 /* Screen */,
+				60F314FB2C3505200088C390 /* SwiftUIRoadMapApp.swift */,
+				60F314FD2C3505200088C390 /* ContentView.swift */,
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
+		60B7753C2C35077000E7DEF6 /* Screen */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Screen;
+			sourceTree = "<group>";
+		};
 		60F314EF2C3505200088C390 = {
 			isa = PBXGroup;
 			children = (
@@ -95,8 +112,7 @@
 		60F314FA2C3505200088C390 /* SwiftUIRoadMap */ = {
 			isa = PBXGroup;
 			children = (
-				60F314FB2C3505200088C390 /* SwiftUIRoadMapApp.swift */,
-				60F314FD2C3505200088C390 /* ContentView.swift */,
+				60B7753B2C35074900E7DEF6 /* Core */,
 				60F314FF2C3505210088C390 /* Assets.xcassets */,
 				60F315012C3505210088C390 /* SwiftUIRoadMap.entitlements */,
 				60F315022C3505210088C390 /* Preview Content */,
