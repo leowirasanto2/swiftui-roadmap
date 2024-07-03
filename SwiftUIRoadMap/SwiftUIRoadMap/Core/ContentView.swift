@@ -16,11 +16,20 @@ struct ContentView: View {
             
             ForEach(roadMap, id: \.rawValue) { item in
                 Button {
-                    
+                    switch item {
+                    case .views:
+                        break
+                    default:
+                        break
+                    }
                 } label: {
                     Text(item.description)
+                        .padding(8)
+                        .foregroundStyle(.white)
+                        .background(.orange)
+                        .fontWeight(.bold)
                 }
-                .padding(8)
+                .clipShape(RoundedRectangle(cornerRadius: 10))
             }
         }
         .padding()

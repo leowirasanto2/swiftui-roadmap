@@ -28,7 +28,7 @@ enum Roadmap: Int, CaseIterable {
         case .pattern:
             return "Pattern"
         case .unknown:
-            return "Unknown Roadmap"
+            return "Please select roadmap"
         }
     }
 }
@@ -36,6 +36,7 @@ enum Roadmap: Int, CaseIterable {
 enum ViewsRoadmap: Int, CaseIterable {
     case compose = 0
     case modifier
+    case unknown
     
     var description: String {
         switch self {
@@ -43,6 +44,8 @@ enum ViewsRoadmap: Int, CaseIterable {
             return "Compose View"
         case .modifier:
             return "View Modifier"
+        case .unknown:
+            return "Please select roadmap"
         }
     }
 }
@@ -51,6 +54,7 @@ enum ViewComposeRoadmap: Int, CaseIterable {
     case navigation = 0
     case containerViews
     case layoutSystem
+    case unknown
     
     var description: String {
         switch self {
@@ -60,6 +64,8 @@ enum ViewComposeRoadmap: Int, CaseIterable {
             return "Container Views"
         case .layoutSystem:
             return "Layout System"
+        case .unknown:
+            return "Please select roadmap"
         }
     }
 }
