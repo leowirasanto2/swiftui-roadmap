@@ -8,12 +8,20 @@
 import SwiftUI
 
 struct ContentView: View {
+    private var roadMap = Roadmap.allCases
+    
     var body: some View {
         VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
-            Text("Hello, world!")
+            Text("Choose Roadmap:")
+            
+            ForEach(roadMap, id: \.rawValue) { item in
+                Button {
+                    
+                } label: {
+                    Text(item.description)
+                }
+                .padding(8)
+            }
         }
         .padding()
     }

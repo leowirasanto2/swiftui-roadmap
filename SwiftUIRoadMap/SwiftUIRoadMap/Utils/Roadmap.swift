@@ -7,21 +7,59 @@
 
 import Foundation
 
-enum Roadmap {
-    case views(type: ViewsRoadmap)
+enum Roadmap: Int, CaseIterable {
+    case views = 0
     case data
     case animations
     case interaction
     case pattern
+    case unknown
+    
+    var description: String {
+        switch self {
+        case .views:
+            return "Views"
+        case .data:
+            return "Data"
+        case .animations:
+            return "Animations"
+        case .interaction:
+            return "Interaction"
+        case .pattern:
+            return "Pattern"
+        case .unknown:
+            return "Unknown Roadmap"
+        }
+    }
 }
 
-enum ViewsRoadmap {
-    case compose(type: ViewComposeRoadmap)
+enum ViewsRoadmap: Int, CaseIterable {
+    case compose = 0
     case modifier
+    
+    var description: String {
+        switch self {
+        case .compose:
+            return "Compose View"
+        case .modifier:
+            return "View Modifier"
+        }
+    }
 }
 
-enum ViewComposeRoadmap {
-    case navigation
+enum ViewComposeRoadmap: Int, CaseIterable {
+    case navigation = 0
     case containerViews
     case layoutSystem
+    
+    var description: String {
+        switch self {
+        case .navigation:
+            return "Navigation"
+        case .containerViews:
+            return "Container Views"
+        case .layoutSystem:
+            return "Layout System"
+        }
+    }
 }
