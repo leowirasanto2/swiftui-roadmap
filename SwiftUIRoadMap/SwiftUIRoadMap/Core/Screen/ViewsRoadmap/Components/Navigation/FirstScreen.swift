@@ -18,38 +18,36 @@ struct FirstScreen: View {
     ]
     
     var body: some View {
-        NavigationView {
-            VStack {
-                Text("Select at least one to navigate")
-                
-                ForEach(valueOptions, id: \.self) { option in
-                    Button {
-                        if !selectedValues.contains(option) {
-                            selectedValues.append(option)
-                        } else {
-                            if let index = selectedValues.firstIndex(where: { $0 == option }) {
-                                selectedValues.remove(at: index)
-                            }
+        VStack {
+            Text("Select at least one to navigate")
+            
+            ForEach(valueOptions, id: \.self) { option in
+                Button {
+                    if !selectedValues.contains(option) {
+                        selectedValues.append(option)
+                    } else {
+                        if let index = selectedValues.firstIndex(where: { $0 == option }) {
+                            selectedValues.remove(at: index)
                         }
-                    } label: {
-                        Text(option)
-                            .foregroundStyle(.white)
-                            .padding(8)
-                            .background(!selectedValues.contains(option) ? .blue : .gray)
                     }
-                    .clipShape(RoundedRectangle(cornerRadius: 10))
+                } label: {
+                    Text(option)
+                        .foregroundStyle(.white)
+                        .padding(8)
+                        .background(!selectedValues.contains(option) ? .blue : .gray)
                 }
-                
-                if !selectedValues.isEmpty {
-                    NavigationLink(destination: SecondScreen(passedParameter: selectedValues)) {
-                        Text("Continue")
-                            .padding(8)
-                            .foregroundStyle(.white)
-                            .background(.green)
-                    }
-                    .clipShape(RoundedRectangle(cornerRadius: 10))
-                    .padding(.top, 32)
+                .clipShape(RoundedRectangle(cornerRadius: 10))
+            }
+            
+            if !selectedValues.isEmpty {
+                NavigationLink(destination: SecondScreen(passedParameter: selectedValues)) {
+                    Text("Continue")
+                        .padding(8)
+                        .foregroundStyle(.white)
+                        .background(.green)
                 }
+                .clipShape(RoundedRectangle(cornerRadius: 10))
+                .padding(.top, 32)
             }
         }
     }

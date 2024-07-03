@@ -10,38 +10,11 @@ import SwiftUI
 struct ViewsRoadmapSelection: View {
     private var roadMap = ViewsRoadmap.allCases
     private var composeRoadmap = ViewComposeRoadmap.allCases
-    @State private var selectedRoadmap: ViewsRoadmap = .unknown
-    @State private var selectedComposeViewRoadmap: ViewComposeRoadmap = .unknown
     
     var body: some View {
         NavigationView {
             mainViewSelectionView
         }
-        //        VStack {
-        //            switch selectedRoadmap {
-        //            case .compose:
-        //                backToMainMenuButton
-        //                viewComposeSelectionView
-        //            case .modifier:
-        //                backToMainMenuButton
-        //                Text("Coming soon")
-        //            case .unknown:
-        //                mainViewSelectionView
-        //            }
-        //        }
-    }
-    
-    private var backToMainMenuButton: some View {
-        return Button {
-            selectedRoadmap = .unknown
-            selectedComposeViewRoadmap = .unknown
-        } label: {
-            HStack(alignment: .center) {
-                Image(systemName: "arrow.left.circle")
-                Text("Back")
-            }
-        }
-        .padding()
     }
     
     private var mainViewSelectionView: some View {
