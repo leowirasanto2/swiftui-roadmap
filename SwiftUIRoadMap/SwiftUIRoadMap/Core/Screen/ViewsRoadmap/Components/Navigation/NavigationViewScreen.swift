@@ -23,7 +23,7 @@ struct NavigationViewScreen: View {
                     case .splitView:
                         SplitViewScreen()
                     case .pageView:
-                        Text("Soon")
+                        PageViewScreen()
                     case .tabView:
                         Text("Soon")
                     case .tabItem:
