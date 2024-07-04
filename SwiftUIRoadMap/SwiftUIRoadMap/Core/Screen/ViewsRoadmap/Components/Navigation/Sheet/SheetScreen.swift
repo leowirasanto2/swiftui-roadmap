@@ -48,15 +48,21 @@ struct SheetScreen: View {
         }
         .confirmationDialog("Confirmation dialog", isPresented: $isActionSheetShown) {
             Button("Blue") {
-                selectedColor = .blue
+                withAnimation {
+                    selectedColor = .blue
+                }
             }
             
             Button("Green") {
-                selectedColor = .green
+                withAnimation {
+                    selectedColor = .green
+                }
             }
             
             Button("Orange") {
-                selectedColor = .orange
+                withAnimation {
+                    selectedColor = .orange
+                }
             }
         }
     }
