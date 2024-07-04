@@ -12,7 +12,7 @@ struct NavigationViewScreen: View {
     @State var selected: NavigationRoadmap?
     
     var body: some View {
-        VStack (alignment: .leading, spacing: 16) {
+        VStack(spacing: 16) {
             ForEach(selections, id: \.rawValue) { selectedMenu in
                 NavigationLink {
                     switch selectedMenu {
@@ -25,9 +25,9 @@ struct NavigationViewScreen: View {
                     case .pageView:
                         PageViewScreen()
                     case .tabView:
-                        Text("Soon")
+                        TabViewScreen()
                     case .tabItem:
-                        Text("Soon")
+                        TabViewScreen()
                     case .alert:
                         Text("Soon")
                     case .sheet:
@@ -43,8 +43,12 @@ struct NavigationViewScreen: View {
                     }
                 } label: {
                     Text(selectedMenu.description)
-                        .frame(maxWidth: .infinity, alignment: .leading)
+                        .padding(8)
+                        .foregroundStyle(.white)
+                        .background(.orange)
+                        .fontWeight(.bold)
                 }
+                .clipShape(RoundedRectangle(cornerRadius: 10))
                 .padding(.horizontal)
             }
         }
