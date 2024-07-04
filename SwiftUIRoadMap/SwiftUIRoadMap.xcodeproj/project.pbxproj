@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		605B33622C36869A00BD872E /* NavigationBarItemScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 605B33612C36869A00BD872E /* NavigationBarItemScreen.swift */; };
+		605B33652C3688C600BD872E /* SplitViewScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 605B33642C3688C600BD872E /* SplitViewScreen.swift */; };
 		60B7753E2C3507B200E7DEF6 /* NavigationLinkFirstScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60B7753D2C3507B200E7DEF6 /* NavigationLinkFirstScreen.swift */; };
 		60B775402C3507BA00E7DEF6 /* NavigationLinkSecondScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60B7753F2C3507BA00E7DEF6 /* NavigationLinkSecondScreen.swift */; };
 		60B775432C3507FB00E7DEF6 /* Roadmap.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60B775422C3507FB00E7DEF6 /* Roadmap.swift */; };
@@ -41,6 +42,7 @@
 
 /* Begin PBXFileReference section */
 		605B33612C36869A00BD872E /* NavigationBarItemScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationBarItemScreen.swift; sourceTree = "<group>"; };
+		605B33642C3688C600BD872E /* SplitViewScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplitViewScreen.swift; sourceTree = "<group>"; };
 		60B7753D2C3507B200E7DEF6 /* NavigationLinkFirstScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationLinkFirstScreen.swift; sourceTree = "<group>"; };
 		60B7753F2C3507BA00E7DEF6 /* NavigationLinkSecondScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationLinkSecondScreen.swift; sourceTree = "<group>"; };
 		60B775422C3507FB00E7DEF6 /* Roadmap.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Roadmap.swift; sourceTree = "<group>"; };
@@ -101,6 +103,14 @@
 			path = NavigationBarItem;
 			sourceTree = "<group>";
 		};
+		605B33632C3688A800BD872E /* SplitView */ = {
+			isa = PBXGroup;
+			children = (
+				605B33642C3688C600BD872E /* SplitViewScreen.swift */,
+			);
+			path = SplitView;
+			sourceTree = "<group>";
+		};
 		60B7753B2C35074900E7DEF6 /* Core */ = {
 			isa = PBXGroup;
 			children = (
@@ -147,6 +157,7 @@
 		60B7754C2C35110400E7DEF6 /* Navigation */ = {
 			isa = PBXGroup;
 			children = (
+				605B33632C3688A800BD872E /* SplitView */,
 				605B33602C36868E00BD872E /* NavigationBarItem */,
 				605B335F2C3685B300BD872E /* NavigationLink */,
 				60B7754A2C35110000E7DEF6 /* NavigationViewScreen.swift */,
@@ -342,6 +353,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				60F314FE2C3505200088C390 /* ContentView.swift in Sources */,
+				605B33652C3688C600BD872E /* SplitViewScreen.swift in Sources */,
 				60B775402C3507BA00E7DEF6 /* NavigationLinkSecondScreen.swift in Sources */,
 				60B7754B2C35110000E7DEF6 /* NavigationViewScreen.swift in Sources */,
 				60F314FC2C3505200088C390 /* SwiftUIRoadMapApp.swift in Sources */,
