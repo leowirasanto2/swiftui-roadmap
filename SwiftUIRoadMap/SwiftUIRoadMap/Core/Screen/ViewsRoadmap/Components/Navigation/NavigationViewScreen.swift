@@ -31,9 +31,9 @@ struct NavigationViewScreen: View {
                     case .alert:
                         AlertViewScreen()
                     case .sheet:
-                        Text("Soon")
+                        SheetScreen()
                     case .actionSheet:
-                        Text("Soon")
+                        SheetScreen()
                     case .popOver:
                         Text("Soon")
                     case .modalView:
