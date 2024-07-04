@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		60B7753E2C3507B200E7DEF6 /* FirstScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60B7753D2C3507B200E7DEF6 /* FirstScreen.swift */; };
+		60B775402C3507BA00E7DEF6 /* SecondScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60B7753F2C3507BA00E7DEF6 /* SecondScreen.swift */; };
+		60B775432C3507FB00E7DEF6 /* Roadmap.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60B775422C3507FB00E7DEF6 /* Roadmap.swift */; };
+		60B775482C350C6300E7DEF6 /* ViewsRoadmapSelection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60B775472C350C6300E7DEF6 /* ViewsRoadmapSelection.swift */; };
+		60B7754B2C35110000E7DEF6 /* NavigationViewScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60B7754A2C35110000E7DEF6 /* NavigationViewScreen.swift */; };
 		60F314FC2C3505200088C390 /* SwiftUIRoadMapApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60F314FB2C3505200088C390 /* SwiftUIRoadMapApp.swift */; };
 		60F314FE2C3505200088C390 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60F314FD2C3505200088C390 /* ContentView.swift */; };
 		60F315002C3505210088C390 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 60F314FF2C3505210088C390 /* Assets.xcassets */; };
@@ -34,6 +39,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		60B7753D2C3507B200E7DEF6 /* FirstScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstScreen.swift; sourceTree = "<group>"; };
+		60B7753F2C3507BA00E7DEF6 /* SecondScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondScreen.swift; sourceTree = "<group>"; };
+		60B775422C3507FB00E7DEF6 /* Roadmap.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Roadmap.swift; sourceTree = "<group>"; };
+		60B775472C350C6300E7DEF6 /* ViewsRoadmapSelection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewsRoadmapSelection.swift; sourceTree = "<group>"; };
+		60B7754A2C35110000E7DEF6 /* NavigationViewScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationViewScreen.swift; sourceTree = "<group>"; };
 		60F314F82C3505200088C390 /* SwiftUIRoadMap.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftUIRoadMap.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		60F314FB2C3505200088C390 /* SwiftUIRoadMapApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUIRoadMapApp.swift; sourceTree = "<group>"; };
 		60F314FD2C3505200088C390 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -72,6 +82,59 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		60B7753B2C35074900E7DEF6 /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				60B7753C2C35077000E7DEF6 /* Screen */,
+				60F314FB2C3505200088C390 /* SwiftUIRoadMapApp.swift */,
+				60F314FD2C3505200088C390 /* ContentView.swift */,
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
+		60B7753C2C35077000E7DEF6 /* Screen */ = {
+			isa = PBXGroup;
+			children = (
+				60B775442C350AB800E7DEF6 /* ViewsRoadmap */,
+			);
+			path = Screen;
+			sourceTree = "<group>";
+		};
+		60B775412C3507EA00E7DEF6 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				60B775422C3507FB00E7DEF6 /* Roadmap.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		60B775442C350AB800E7DEF6 /* ViewsRoadmap */ = {
+			isa = PBXGroup;
+			children = (
+				60B775492C3510E200E7DEF6 /* Components */,
+				60B775472C350C6300E7DEF6 /* ViewsRoadmapSelection.swift */,
+			);
+			path = ViewsRoadmap;
+			sourceTree = "<group>";
+		};
+		60B775492C3510E200E7DEF6 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				60B7754C2C35110400E7DEF6 /* Navigation */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		60B7754C2C35110400E7DEF6 /* Navigation */ = {
+			isa = PBXGroup;
+			children = (
+				60B7753D2C3507B200E7DEF6 /* FirstScreen.swift */,
+				60B7753F2C3507BA00E7DEF6 /* SecondScreen.swift */,
+				60B7754A2C35110000E7DEF6 /* NavigationViewScreen.swift */,
+			);
+			path = Navigation;
+			sourceTree = "<group>";
+		};
 		60F314EF2C3505200088C390 = {
 			isa = PBXGroup;
 			children = (
@@ -95,8 +158,8 @@
 		60F314FA2C3505200088C390 /* SwiftUIRoadMap */ = {
 			isa = PBXGroup;
 			children = (
-				60F314FB2C3505200088C390 /* SwiftUIRoadMapApp.swift */,
-				60F314FD2C3505200088C390 /* ContentView.swift */,
+				60B775412C3507EA00E7DEF6 /* Utils */,
+				60B7753B2C35074900E7DEF6 /* Core */,
 				60F314FF2C3505210088C390 /* Assets.xcassets */,
 				60F315012C3505210088C390 /* SwiftUIRoadMap.entitlements */,
 				60F315022C3505210088C390 /* Preview Content */,
@@ -260,7 +323,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				60F314FE2C3505200088C390 /* ContentView.swift in Sources */,
+				60B775402C3507BA00E7DEF6 /* SecondScreen.swift in Sources */,
+				60B7754B2C35110000E7DEF6 /* NavigationViewScreen.swift in Sources */,
 				60F314FC2C3505200088C390 /* SwiftUIRoadMapApp.swift in Sources */,
+				60B7753E2C3507B200E7DEF6 /* FirstScreen.swift in Sources */,
+				60B775482C350C6300E7DEF6 /* ViewsRoadmapSelection.swift in Sources */,
+				60B775432C3507FB00E7DEF6 /* Roadmap.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -442,10 +510,11 @@
 				PRODUCT_BUNDLE_IDENTIFIER = leowirasanto.SwiftUIRoadMap;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = auto;
-				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -480,10 +549,11 @@
 				PRODUCT_BUNDLE_IDENTIFIER = leowirasanto.SwiftUIRoadMap;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = auto;
-				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
