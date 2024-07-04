@@ -35,11 +35,11 @@ struct NavigationViewScreen: View {
                     case .actionSheet:
                         SheetScreen()
                     case .popOver:
-                        Text("Soon")
+                        PopOverScreen()
                     case .modalView:
                         Text("Soon")
                     case .contextMenu:
-                        Text("Soon")
+                        ContexMenuScreen()
                     }
                 } label: {
                     Text(selectedMenu.description)

@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct PopOverView: View {
+struct PopOverScreen: View {
     @State private var isPopOverShown = false
     
     var body: some View {
@@ -23,5 +23,5 @@ struct PopOverView: View {
 }
 
 #Preview {
-    PopOverView()
+    PopOverScreen()
 }
