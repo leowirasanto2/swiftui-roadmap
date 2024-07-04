@@ -19,7 +19,7 @@ struct NavigationViewScreen: View {
                     case .navigationLink:
                         NavigationLinkFirstScreen()
                     case .navigationBarItems:
-                        Text("Soon")
+                        NavigationBarItemScreen()
                     case .splitView:
                         Text("Soon")
                     case .pageView:
