@@ -74,6 +74,7 @@ enum NavigationRoadmap: Int, CaseIterable {
     case navigationLink = 0
     case navigationBarItems
     case splitView
+    case pageView
     case tabView
     case tabItem
     case alert
@@ -91,6 +92,8 @@ enum NavigationRoadmap: Int, CaseIterable {
             return "Navigation Bar Items"
         case .splitView:
             return "Split View"
+        case .pageView:
+            return "Page View"
         case .tabView:
             return "Tab View"
         case .tabItem:
