@@ -8,13 +8,47 @@
 import SwiftUI
 
 struct NavigationViewScreen: View {
+    private var selections = NavigationRoadmap.allCases
+    @State var selected: NavigationRoadmap?
+    
     var body: some View {
-        VStack (spacing: 16) {
-            Text("Hi! This is the navigation sample in SwiftUI")
-                .font(.headline)
-            
-            FirstScreen()
+        VStack (alignment: .leading, spacing: 16) {
+            ForEach(selections, id: \.rawValue) { selectedMenu in
+                NavigationLink {
+                    switch selectedMenu {
+                    case .navigationLink:
+                        FirstScreen()
+                    case .navigationBarItems:
+                        Text("Soon")
+                    case .splitView:
+                        Text("Soon")
+                    case .pageView:
+                        Text("Soon")
+                    case .tabView:
+                        Text("Soon")
+                    case .tabItem:
+                        Text("Soon")
+                    case .alert:
+                        Text("Soon")
+                    case .sheet:
+                        Text("Soon")
+                    case .actionSheet:
+                        Text("Soon")
+                    case .popOver:
+                        Text("Soon")
+                    case .modalView:
+                        Text("Soon")
+                    case .contextMenu:
+                        Text("Soon")
+                    }
+                } label: {
+                    Text(selectedMenu.description)
+                        .frame(maxWidth: .infinity, alignment: .leading)
+                }
+                .padding(.horizontal)
+            }
         }
+        .frame(maxWidth: .infinity)
     }
 }
 

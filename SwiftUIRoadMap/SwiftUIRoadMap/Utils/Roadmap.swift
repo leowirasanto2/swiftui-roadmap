@@ -69,3 +69,47 @@ enum ViewComposeRoadmap: Int, CaseIterable {
         }
     }
 }
+
+enum NavigationRoadmap: Int, CaseIterable {
+    case navigationLink = 0
+    case navigationBarItems
+    case splitView
+    case pageView
+    case tabView
+    case tabItem
+    case alert
+    case sheet
+    case actionSheet
+    case popOver
+    case modalView
+    case contextMenu
+    
+    var description: String {
+        switch self {
+        case .navigationLink:
+            return "Navigation Link"
+        case .navigationBarItems:
+            return "Navigation Bar Items"
+        case .splitView:
+            return "Split View"
+        case .pageView:
+            return "Page View"
+        case .tabView:
+            return "Tab View"
+        case .tabItem:
+            return "Tab Item"
+        case .alert:
+            return "Alert"
+        case .sheet:
+            return "Sheet"
+        case .actionSheet:
+            return "Action Sheet"
+        case .popOver:
+            return "Pop Over"
+        case .modalView:
+            return "Modal View"
+        case .contextMenu:
+            return "Context Menu"
+        }
+    }
+}

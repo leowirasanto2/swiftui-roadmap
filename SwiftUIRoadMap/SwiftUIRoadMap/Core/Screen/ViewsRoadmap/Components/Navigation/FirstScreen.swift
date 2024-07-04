@@ -9,6 +9,7 @@ import SwiftUI
 
 struct FirstScreen: View {
     @State var selectedValues: [String] = []
+    @State var showNextButton = false
     private var valueOptions = [
         "Hi this is the first option",
         "Thank you for choosing me as the parameter :)",
@@ -19,7 +20,7 @@ struct FirstScreen: View {
     
     var body: some View {
         VStack {
-            Text("Select at least one to navigate")
+            Text("Select at least 2 to navigate")
             
             ForEach(valueOptions, id: \.self) { option in
                 Button {
@@ -30,6 +31,10 @@ struct FirstScreen: View {
                             selectedValues.remove(at: index)
                         }
                     }
+                    
+                    withAnimation {
+                        showNextButton = selectedValues.count > 1
+                    }
                 } label: {
                     Text(option)
                         .foregroundStyle(.white)
@@ -39,7 +44,7 @@ struct FirstScreen: View {
                 .clipShape(RoundedRectangle(cornerRadius: 10))
             }
             
-            if !selectedValues.isEmpty {
+            if showNextButton {
                 NavigationLink(destination: SecondScreen(passedParameter: selectedValues)) {
                     Text("Continue")
                         .padding(8)
