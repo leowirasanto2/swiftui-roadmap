@@ -22,10 +22,8 @@ struct NavigationViewScreen: View {
                         NavigationBarItemScreen()
                     case .splitView:
                         SplitViewScreen()
-                    case .pageView:
-                        PageViewScreen()
                     case .tabView:
-                        Text("Soon")
+                        PageViewScreen()
                     case .tabItem:
                         Text("Soon")
                     case .alert:
