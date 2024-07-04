@@ -29,7 +29,7 @@ struct NavigationViewScreen: View {
                     case .tabItem:
                         TabViewScreen()
                     case .alert:
-                        Text("Soon")
+                        AlertViewScreen()
                     case .sheet:
                         Text("Soon")
                     case .actionSheet:
@@ -57,5 +57,7 @@ struct NavigationViewScreen: View {
 }
 
 #Preview {
-    NavigationViewScreen()
+    NavigationStack {
+        NavigationViewScreen()
+    }
 }
