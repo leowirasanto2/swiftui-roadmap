@@ -8,11 +8,11 @@
 import SwiftUI
 
 struct SheetScreen: View {
-    @State private var isCustomHeightSheetShown = false
     @State private var isSheetShown = false
     @State private var isActionSheetShown = false
     
     @State private var sheetHeight: CGFloat = 100
+    @State private var selectedColor: Color = .blue
     
     var body: some View {
         VStack(spacing: 16) {
@@ -24,9 +24,10 @@ struct SheetScreen: View {
             }
             
             Button {
-                
+                isActionSheetShown = true
             } label: {
                 Text("Action sheet")
+                    .foregroundStyle(selectedColor)
             }
         }
         .sheet(isPresented: $isSheetShown) {
@@ -44,6 +45,19 @@ struct SheetScreen: View {
             .background(.brown.opacity(0.7))
             .clipShape(RoundedRectangle(cornerRadius: 10))
             .padding()
+        }
+        .confirmationDialog("Confirmation dialog", isPresented: $isActionSheetShown) {
+            Button("Blue") {
+                selectedColor = .blue
+            }
+            
+            Button("Green") {
+                selectedColor = .green
+            }
+            
+            Button("Orange") {
+                selectedColor = .orange
+            }
         }
     }
 }
