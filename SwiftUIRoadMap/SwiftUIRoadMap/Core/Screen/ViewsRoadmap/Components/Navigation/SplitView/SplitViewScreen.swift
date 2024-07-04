@@ -13,19 +13,27 @@ struct SplitViewScreen: View {
     @State private var lastData: DataModel?
     
     var body: some View {
-        NavigationSplitView {
-            List(SampleData.firstScreenData, selection: $firstData) { item in
-                NavigationLink(item.text, value: item)
+        VStack(alignment: .leading, spacing: -4) {
+            Text("Navigation Split View Container")
+                .font(.caption)
+                .padding(.horizontal)
+            NavigationSplitView {
+                List(SampleData.firstScreenData, selection: $firstData) { item in
+                    NavigationLink(item.text, value: item)
+                }
+            } content: {
+                List(SampleData.secondScreenData, selection: $secondData) { item in
+                    NavigationLink(item.text, value: item)
+                }
+                .navigationTitle(firstData?.text ?? "Second Screen")
+            } detail: {
+                List(SampleData.lastScreenData, selection: $lastData) { item in
+                    NavigationLink(item.text, value: item)
+                }
             }
-        } content: {
-            List(SampleData.secondScreenData, selection: $secondData) { item in
-                NavigationLink(item.text, value: item)
-            }
-            .navigationTitle(firstData?.text ?? "Second Screen")
-        } detail: {
-            List(SampleData.lastScreenData, selection: $lastData) { item in
-                NavigationLink(item.text, value: item)
-            }
+            .clipShape(RoundedRectangle(cornerRadius: 10))
+            .shadow(radius: 8)
+            .padding()
         }
     }
 }
