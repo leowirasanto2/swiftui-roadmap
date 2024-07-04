@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct FirstScreen: View {
+struct NavigationLinkFirstScreen: View {
     @State var selectedValues: [String] = []
     @State var showNextButton = false
     private var valueOptions = [
@@ -45,7 +45,7 @@ struct FirstScreen: View {
             }
             
             if showNextButton {
-                NavigationLink(destination: SecondScreen(passedParameter: selectedValues)) {
+                NavigationLink(destination: NavigationLinkSecondScreen(passedParameter: selectedValues)) {
                     Text("Continue")
                         .padding(8)
                         .foregroundStyle(.white)
@@ -59,5 +59,5 @@ struct FirstScreen: View {
 }
 
 #Preview {
-    FirstScreen()
+    NavigationLinkFirstScreen()
 }

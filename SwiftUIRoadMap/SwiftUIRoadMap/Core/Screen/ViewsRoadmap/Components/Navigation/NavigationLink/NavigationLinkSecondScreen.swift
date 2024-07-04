@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct SecondScreen: View {
+struct NavigationLinkSecondScreen: View {
     var passedParameter: [String] = []
     
     var body: some View {
@@ -24,5 +24,5 @@ struct SecondScreen: View {
 }
 
 #Preview {
-    SecondScreen(passedParameter: ["a", "b", "c"])
+    NavigationLinkSecondScreen(passedParameter: ["a", "b", "c"])
 }

@@ -17,7 +17,7 @@ struct NavigationViewScreen: View {
                 NavigationLink {
                     switch selectedMenu {
                     case .navigationLink:
-                        FirstScreen()
+                        NavigationLinkFirstScreen()
                     case .navigationBarItems:
                         Text("Soon")
                     case .splitView:
