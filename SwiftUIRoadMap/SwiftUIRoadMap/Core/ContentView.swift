@@ -9,33 +9,28 @@ import SwiftUI
 
 struct ContentView: View {
     private var roadMap = Roadmap.allCases
-    @State private var path: [Roadmap] = []
     
     var body: some View {
-        NavigationStack(path: $path) {
+        NavigationStack {
             VStack {
                 Text("Choose Roadmap:")
                 
-                ForEach(roadMap, id: \.rawValue) { item in
-                    Button {
-                        path = [item]
+                ForEach(roadMap, id: \.rawValue) { selected in
+                    NavigationLink {
+                        switch selected {
+                        case .views:
+                            ViewsRoadmapSelection()
+                        default:
+                            Text("Coming soon")
+                        }
                     } label: {
-                        Text(item.description)
+                        Text(selected.description)
                             .padding(8)
                             .foregroundStyle(.white)
                             .background(.orange)
                             .fontWeight(.bold)
                     }
                     .clipShape(RoundedRectangle(cornerRadius: 10))
-                }
-            }
-            .padding()
-            .navigationDestination(for: Roadmap.self) { selected in
-                switch selected {
-                case .views:
-                    ViewsRoadmapSelection()
-                default:
-                    Text("Coming soon")
                 }
             }
         }

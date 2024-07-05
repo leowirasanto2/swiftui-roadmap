@@ -12,9 +12,7 @@ struct ViewsRoadmapSelection: View {
     private var composeRoadmap = ViewComposeRoadmap.allCases
     
     var body: some View {
-        NavigationView {
-            mainViewSelectionView
-        }
+        mainViewSelectionView
     }
     
     private var mainViewSelectionView: some View {
