@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		604A19B32C37E5E700B59B88 /* StackViewScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 604A19B22C37E5E700B59B88 /* StackViewScreen.swift */; };
 		605B33622C36869A00BD872E /* NavigationBarItemScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 605B33612C36869A00BD872E /* NavigationBarItemScreen.swift */; };
 		605B33652C3688C600BD872E /* SplitViewScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 605B33642C3688C600BD872E /* SplitViewScreen.swift */; };
 		605B33682C368DB800BD872E /* PageViewScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 605B33672C368DB800BD872E /* PageViewScreen.swift */; };
@@ -47,6 +48,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		604A19B22C37E5E700B59B88 /* StackViewScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StackViewScreen.swift; sourceTree = "<group>"; };
 		605B33612C36869A00BD872E /* NavigationBarItemScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationBarItemScreen.swift; sourceTree = "<group>"; };
 		605B33642C3688C600BD872E /* SplitViewScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplitViewScreen.swift; sourceTree = "<group>"; };
 		605B33672C368DB800BD872E /* PageViewScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageViewScreen.swift; sourceTree = "<group>"; };
@@ -98,6 +100,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		604A19B12C37E5CF00B59B88 /* ContainerViews */ = {
+			isa = PBXGroup;
+			children = (
+				604A19B22C37E5E700B59B88 /* StackViewScreen.swift */,
+			);
+			path = ContainerViews;
+			sourceTree = "<group>";
+		};
 		605B335F2C3685B300BD872E /* NavigationLink */ = {
 			isa = PBXGroup;
 			children = (
@@ -209,6 +219,7 @@
 		60B775492C3510E200E7DEF6 /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				604A19B12C37E5CF00B59B88 /* ContainerViews */,
 				60B7754C2C35110400E7DEF6 /* Navigation */,
 			);
 			path = Components;
@@ -419,6 +430,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				60F314FE2C3505200088C390 /* ContentView.swift in Sources */,
+				604A19B32C37E5E700B59B88 /* StackViewScreen.swift in Sources */,
 				605B33652C3688C600BD872E /* SplitViewScreen.swift in Sources */,
 				605B33742C36B09200BD872E /* PopOverScreen.swift in Sources */,
 				60B775402C3507BA00E7DEF6 /* NavigationLinkSecondScreen.swift in Sources */,
