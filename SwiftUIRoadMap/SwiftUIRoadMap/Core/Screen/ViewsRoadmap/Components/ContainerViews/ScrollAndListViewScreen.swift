@@ -33,11 +33,15 @@ struct ScrollAndListViewScreen: View {
     
     var body: some View {
         VStack(alignment: .leading, spacing: 16) {
-            Picker("Style", selection: $selectedStyle) {
+            Menu("Select List Style") {
                 ForEach(styles, id: \.self) { item in
-                    Text(item)
+                    Button {
+                        selectedStyle = item
+                    } label: {
+                        Text(item == selectedStyle ? "◼️ \(item)" : item)
+                    }
                 }
-            }
+            }.padding()
             
             switch ListViewStyle(rawValue: selectedStyle) {
             case .sidebar:
