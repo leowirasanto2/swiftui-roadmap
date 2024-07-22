@@ -32,7 +32,7 @@ struct ScrollAndListViewScreen: View {
     ]
     
     var body: some View {
-        VStack(alignment: .leading, spacing: 16) {
+        VStack(alignment: .leading) {
             Menu("Select List Style") {
                 ForEach(styles, id: \.self) { item in
                     Button {
