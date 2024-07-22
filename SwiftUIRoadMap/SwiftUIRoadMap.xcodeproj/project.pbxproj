@@ -18,6 +18,8 @@
 		605B33772C36B11500BD872E /* ContexMenuScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 605B33762C36B11500BD872E /* ContexMenuScreen.swift */; };
 		60A49D692C4E2D3A005E3798 /* GroupViewScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60A49D682C4E2D3A005E3798 /* GroupViewScreen.swift */; };
 		60A49D6B2C4E2F64005E3798 /* ScrollAndListViewScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60A49D6A2C4E2F64005E3798 /* ScrollAndListViewScreen.swift */; };
+		60A49D6D2C4E4065005E3798 /* GridViewScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60A49D6C2C4E4065005E3798 /* GridViewScreen.swift */; };
+		60A49D6F2C4E40BA005E3798 /* ContainerViewSelection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60A49D6E2C4E40BA005E3798 /* ContainerViewSelection.swift */; };
 		60B7753E2C3507B200E7DEF6 /* NavigationLinkFirstScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60B7753D2C3507B200E7DEF6 /* NavigationLinkFirstScreen.swift */; };
 		60B775402C3507BA00E7DEF6 /* NavigationLinkSecondScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60B7753F2C3507BA00E7DEF6 /* NavigationLinkSecondScreen.swift */; };
 		60B775432C3507FB00E7DEF6 /* Roadmap.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60B775422C3507FB00E7DEF6 /* Roadmap.swift */; };
@@ -61,6 +63,8 @@
 		605B33762C36B11500BD872E /* ContexMenuScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContexMenuScreen.swift; sourceTree = "<group>"; };
 		60A49D682C4E2D3A005E3798 /* GroupViewScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupViewScreen.swift; sourceTree = "<group>"; };
 		60A49D6A2C4E2F64005E3798 /* ScrollAndListViewScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScrollAndListViewScreen.swift; sourceTree = "<group>"; };
+		60A49D6C2C4E4065005E3798 /* GridViewScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GridViewScreen.swift; sourceTree = "<group>"; };
+		60A49D6E2C4E40BA005E3798 /* ContainerViewSelection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContainerViewSelection.swift; sourceTree = "<group>"; };
 		60B7753D2C3507B200E7DEF6 /* NavigationLinkFirstScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationLinkFirstScreen.swift; sourceTree = "<group>"; };
 		60B7753F2C3507BA00E7DEF6 /* NavigationLinkSecondScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationLinkSecondScreen.swift; sourceTree = "<group>"; };
 		60B775422C3507FB00E7DEF6 /* Roadmap.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Roadmap.swift; sourceTree = "<group>"; };
@@ -110,6 +114,8 @@
 				604A19B22C37E5E700B59B88 /* StackViewScreen.swift */,
 				60A49D682C4E2D3A005E3798 /* GroupViewScreen.swift */,
 				60A49D6A2C4E2F64005E3798 /* ScrollAndListViewScreen.swift */,
+				60A49D6C2C4E4065005E3798 /* GridViewScreen.swift */,
+				60A49D6E2C4E40BA005E3798 /* ContainerViewSelection.swift */,
 			);
 			path = ContainerViews;
 			sourceTree = "<group>";
@@ -446,9 +452,11 @@
 				60F314FC2C3505200088C390 /* SwiftUIRoadMapApp.swift in Sources */,
 				605B33622C36869A00BD872E /* NavigationBarItemScreen.swift in Sources */,
 				60B7753E2C3507B200E7DEF6 /* NavigationLinkFirstScreen.swift in Sources */,
+				60A49D6F2C4E40BA005E3798 /* ContainerViewSelection.swift in Sources */,
 				60B775482C350C6300E7DEF6 /* ViewsRoadmapSelection.swift in Sources */,
 				605B336B2C369B6B00BD872E /* TabViewScreen.swift in Sources */,
 				60B775432C3507FB00E7DEF6 /* Roadmap.swift in Sources */,
+				60A49D6D2C4E4065005E3798 /* GridViewScreen.swift in Sources */,
 				605B33772C36B11500BD872E /* ContexMenuScreen.swift in Sources */,
 				60A49D692C4E2D3A005E3798 /* GroupViewScreen.swift in Sources */,
 				605B33682C368DB800BD872E /* PageViewScreen.swift in Sources */,
