@@ -113,3 +113,23 @@ enum NavigationRoadmap: Int, CaseIterable {
         }
     }
 }
+
+enum ContainerViewRoadmap: Int, CaseIterable {
+    case stackView
+    case groupView
+    case scrollAndListView
+    case gridView
+    
+    var description: String {
+        switch self {
+        case .stackView:
+            return "Stack View"
+        case .groupView:
+            return "Group View"
+        case .scrollAndListView:
+            return "Scroll and ListView"
+        case .gridView:
+            return "Grid View"
+        }
+    }
+}
